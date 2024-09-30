@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGamebtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+// let img = document.querySelector("#image");
 
 let turnO = true;
 
@@ -36,12 +37,16 @@ boxes.forEach((box) => {
 const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
+    const img = document.getElementById('image');
+    img.src = 'win_O.gif';
     disableBoxes();
 };
 
 const showDraw = () => {
     msg.innerText = "Game Draw!";
     msgContainer.classList.remove("hide");
+    const img = document.getElementById('image');
+    img.src = 'tryagain_1.gif';
     disableBoxes();
 };
 
