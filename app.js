@@ -3,7 +3,22 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGamebtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
-// let img = document.querySelector("#image");
+let scoreBtn = document.querySelector("#score");
+let backbtn = document.querySelector("#back");
+let scoreBoard = document.querySelector(".score-board");
+let msg1 = document.querySelector("#msg1");
+let main = document.querySelector("#abc");
+
+scoreBtn.addEventListener("click", () => {
+    scoreBoard.classList.remove("hide");
+    main.classList.add("hide");
+});
+
+backbtn.addEventListener("click", () => {
+    scoreBoard.classList.add("hide");
+    main.classList.remove("hide");
+});
+
 
 let turnO = true;
 
@@ -39,6 +54,7 @@ const showWinner = (winner) => {
     msgContainer.classList.remove("hide");
     const img = document.getElementById('image');
     img.src = 'win_O.gif';
+    main.classList.add("hide");
     disableBoxes();
 };
 
@@ -47,6 +63,7 @@ const showDraw = () => {
     msgContainer.classList.remove("hide");
     const img = document.getElementById('image');
     img.src = 'tryagain_1.gif';
+    main.classList.add("hide");
     disableBoxes();
 };
 
@@ -83,6 +100,7 @@ resetBtn.addEventListener("click", () => {
 newGamebtn.addEventListener("click", () => {
     enableBoxes();
     msgContainer.classList.add("hide");
+    main.classList.remove("hide");
 });
 
 const disableBoxes = () => {
