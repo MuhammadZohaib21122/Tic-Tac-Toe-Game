@@ -58,12 +58,13 @@ body {
 
         /* border: none; */
         display: block;
-        margin-top: 90px;
-        margin-left: 870px;
+        margin-top: 80px;
+        margin-left: 580px;
+        margin-right: 450px;
 }
 
 #msg {
-    font-size: 8vmin;
+    font-size: 9vmin;
     color: rgb(0, 0, 0);
     background-color: darkorange;
     margin-left: 48dvh;
@@ -74,12 +75,11 @@ body {
 }
 
 #image {
-    /* padding: 9.3rem; */
+
     background-image: url('win_O.gif');
-    /* height: 1.5vmin;
-    width: 14vmin; */
     max-width: 100%;
-            height: auto;
+    height: auto;
+    margin-top: 2.5rem;
 }
 
 .msg-container {
@@ -88,4 +88,78 @@ body {
 
 .hide {
     display: none;
+}
+
+#score {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(3, 255, 150);
+    color: rgb(122, 17, 17);
+    border-radius: 1rem;
+        /* border: none; */
+
+}
+
+.score-board {
+    height: 100vmin;
+}
+
+#back {
+    padding: 1rem;
+    font-size: 2rem;
+    width: 20rem;
+    background-color: rgb(255, 166, 0);
+    color: rgb(122, 17, 17);
+    border-radius: 1rem;
+    display: block;
+    margin-top: 180px;
+    margin-left: 520px;
+    
+}
+
+#msg1 {
+    font-size: 7vmin;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 128);
+    margin-left: 50dvh;
+    margin-right: 50dvh;
+    border-radius: 1rem;
+    margin-bottom: 5dvh;
+}
+p{
+    display: inline;
+}
+
+#PlayerX {
+    font-size:7vmin;
+    color:blueviolet;
+    background-color: rgb(230, 255, 3);
+    margin-right: 10rem;
+    border-radius: 1rem;
+    border: none;
+}
+#PlayerO {
+    font-size: 7vmin;
+    color: red;
+    background-color: yellow;
+    border-radius: 1rem;
+    border: none;
+}
+h2{
+    display: inline;
+}
+#scoreX {
+    
+    font-size:15vmin;
+    color:blueviolet;
+    margin-right: 20rem;
+    border-radius: 1rem;
+}
+#scoreO {
+    font-size:15vmin;
+    color:red;
+    border-radius: 1rem; 
+}
+#sco {
+    margin-top: 8rem;
 }
