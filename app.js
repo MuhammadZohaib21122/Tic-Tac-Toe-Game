@@ -8,6 +8,15 @@ let backbtn = document.querySelector("#back");
 let scoreBoard = document.querySelector(".score-board");
 let msg1 = document.querySelector("#msg1");
 let main = document.querySelector("#abc");
+let scoreX = document.querySelector("#scoreX");
+let scoreO = document.querySelector("#scoreO");
+let score1 = document.querySelector("#new-btn1");
+
+score1.addEventListener("click", () => {
+    scoreBoard.classList.remove("hide");
+    main.classList.add("hide");
+    msgContainer.classList.add("hide");
+});
 
 scoreBtn.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
@@ -17,6 +26,7 @@ scoreBtn.addEventListener("click", () => {
 backbtn.addEventListener("click", () => {
     scoreBoard.classList.add("hide");
     main.classList.remove("hide");
+    enableBoxes();
 });
 
 
@@ -56,6 +66,20 @@ const showWinner = (winner) => {
     img.src = 'win_O.gif';
     main.classList.add("hide");
     disableBoxes();
+
+    if (winner==="X") {
+        let aa  =scoreX.innerText
+        let aaInt = parseInt(aa)
+        aaInt = aaInt+1
+        scoreX.innerText = aaInt
+    }if (winner==="O") {
+        let bb =scoreO.innerText
+       let bbInt = parseInt(bb)
+        bbInt = bbInt +1
+        scoreO.innerText =bbInt
+    }
+       
+    
 };
 
 const showDraw = () => {
