@@ -4,7 +4,10 @@
 }
 
 body {
-    /* background-image: url('tik_tak_toe.jpg'); */
+    /* background-image: url('tic.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; */
     background-color: rgb(105, 206, 37);
     background-attachment: fixed;
     text-align: center;
