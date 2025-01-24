@@ -13,33 +13,26 @@ let scoreX = document.querySelector("#scoreX");
 let scoreO = document.querySelector("#scoreO");
 let score1 = document.querySelector("#new-btn1");
 
+
 score1.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
     msgContainer.classList.add("hide");
+
 });
 
 scoreBtn.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
 
-    document.body.style.backgroundImage = "url('images/scoreBackground.png')";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundAttachment = "fixed";
+    Bimages();
 });
 
 backbtn.addEventListener("click", () => {
     scoreBoard.classList.add("hide");
     main.classList.remove("hide");
     enableBoxes();
-
-    document.body.style.backgroundImage = "url('images/background.png')";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundAttachment = "fixed";
+    Bimages();
 });
 
 
@@ -91,7 +84,7 @@ const showWinner = (winner) => {
         bbInt = bbInt + 1
         scoreO.innerText = bbInt
     }
-    
+
 
 };
 
@@ -156,19 +149,34 @@ const enableBoxes = () => {
 };
 
 imageChangerBtn.addEventListener("click", () => {
+   
+    Bimages();
 
-    if (document.body.style.backgroundImage === 'url("images/background.png")') {
-        
-        document.body.style.backgroundImage = "url('images/homeBG.png')";
-    } else if (44) {
-        
+});
+
+
+const Bimages = () => {
+    const currentBackground = window.getComputedStyle(document.body).backgroundImage;
+
+    if (currentBackground.includes('background.png')) {
+        document.body.style.backgroundImage = "url('images/background2.png')";
+    } else if (currentBackground.includes('background2.png')) {
+        document.body.style.backgroundImage = "url('images/background3.png')";
+    } else if (currentBackground.includes('background3.png')) {
+        document.body.style.backgroundImage = "url('images/background4.png')";
+    } else if (currentBackground.includes('background4.png')) {
+        document.body.style.backgroundImage = "url('images/background5.png')";
+    } else if (currentBackground.includes('background5.png')) {
+        document.body.style.backgroundImage = "url('images/background6.png')";
+    } else if (currentBackground.includes('background6.png')) {
+        document.body.style.backgroundImage = "url('images/background.png')";
+    }else if (currentBackground.includes('scoreBackground.png')) {
         document.body.style.backgroundImage = "url('images/background.png')";
     }
 
- 
+    
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundAttachment = "fixed";
-});
-
+};
