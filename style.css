@@ -4,11 +4,11 @@
 }
 
 body {
-    /* background-image: url('tic.jpg');
+    background-image: url('images/background.png');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; */
-    background-color: rgb(105, 206, 37);
+    background-repeat: no-repeat;
+    /* background-color: rgb(105, 206, 37); */
     background-attachment: fixed;
     text-align: center;
 }
@@ -85,7 +85,7 @@ body {
 
 #image {
 
-    background-image: url('win_O.gif');
+    background-image: url('images/win_O.gif');
     max-width: 100%;
     height: auto;
     margin-top: 2.5rem;
@@ -100,6 +100,16 @@ body {
 }
 
 #score {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(3, 255, 150);
+    color: rgb(122, 17, 17);
+    border-radius: 1rem;
+        /* border: none; */
+
+}
+
+#imageChanger {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: rgb(3, 255, 150);

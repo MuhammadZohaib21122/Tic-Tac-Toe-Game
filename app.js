@@ -4,6 +4,7 @@ let newGamebtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 let scoreBtn = document.querySelector("#score");
+let imageChangerBtn = document.querySelector("#imageChanger");
 let backbtn = document.querySelector("#back");
 let scoreBoard = document.querySelector(".score-board");
 let msg1 = document.querySelector("#msg1");
@@ -21,12 +22,24 @@ score1.addEventListener("click", () => {
 scoreBtn.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
+
+    document.body.style.backgroundImage = "url('images/scoreBackground.png')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
 });
 
 backbtn.addEventListener("click", () => {
     scoreBoard.classList.add("hide");
     main.classList.remove("hide");
     enableBoxes();
+
+    document.body.style.backgroundImage = "url('images/background.png')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
 });
 
 
@@ -36,8 +49,8 @@ const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
     [0, 4, 8],
-    [1, 4, 7],    
-    [2, 5, 8], 
+    [1, 4, 7],
+    [2, 5, 8],
     [2, 4, 6],
     [3, 4, 5],
     [6, 7, 8]
@@ -63,30 +76,30 @@ const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     const img = document.getElementById('image');
-    img.src = 'win_O.gif';
+    img.src = 'images/win_O.gif';
     main.classList.add("hide");
     disableBoxes();
 
-    if (winner==="X") {
-        let aa  =scoreX.innerText
+    if (winner === "X") {
+        let aa = scoreX.innerText
         let aaInt = parseInt(aa)
-        aaInt = aaInt+1
+        aaInt = aaInt + 1
         scoreX.innerText = aaInt
-    }if (winner==="O") {
-        let bb =scoreO.innerText
-       let bbInt = parseInt(bb)
-        bbInt = bbInt +1
-        scoreO.innerText =bbInt
+    } if (winner === "O") {
+        let bb = scoreO.innerText
+        let bbInt = parseInt(bb)
+        bbInt = bbInt + 1
+        scoreO.innerText = bbInt
     }
-       
     
+
 };
 
 const showDraw = () => {
     msg.innerText = "Game Draw!";
     msgContainer.classList.remove("hide");
     const img = document.getElementById('image');
-    img.src = 'tryagain_1.gif';
+    img.src = 'images/tryagain_1.gif';
     main.classList.add("hide");
     disableBoxes();
 };
@@ -100,17 +113,17 @@ const checkWinner = () => {
         if (position1Value !== "" && position2Value !== "" && position3Value !== "") {
             if (position1Value === position2Value && position2Value === position3Value) {
                 showWinner(position1Value);
-                return; 
+                return;
             }
         }
     }
-    
+
     const allFilled = Array.from(boxes).every(box => box.innerText !== "");
     if (allFilled) {
         showDraw();
         boxes.forEach(box => {
-     box.style.backgroundColor = "red"; 
-        box.innerText = "";
+            box.style.backgroundColor = "red";
+            box.innerText = "";
 
         });
     }
@@ -120,6 +133,7 @@ resetBtn.addEventListener("click", () => {
     enableBoxes();
     msgContainer.classList.add("hide");
 });
+
 
 newGamebtn.addEventListener("click", () => {
     enableBoxes();
@@ -140,3 +154,21 @@ const enableBoxes = () => {
         box.style.backgroundColor = "";
     }
 };
+
+imageChangerBtn.addEventListener("click", () => {
+
+    if (document.body.style.backgroundImage === 'url("images/background.png")') {
+        
+        document.body.style.backgroundImage = "url('images/homeBG.png')";
+    } else if (44) {
+        
+        document.body.style.backgroundImage = "url('images/background.png')";
+    }
+
+ 
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
+});
+
