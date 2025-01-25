@@ -169,6 +169,8 @@ const Bimages = () => {
     } else if (currentBackground.includes('background5.png')) {
         document.body.style.backgroundImage = "url('images/background6.png')";
     } else if (currentBackground.includes('background6.png')) {
+        document.body.style.backgroundImage = "url('images/background7.png')";
+    }else if (currentBackground.includes('background7.png')) {
         document.body.style.backgroundImage = "url('images/background.png')";
     }else if (currentBackground.includes('scoreBackground.png')) {
         document.body.style.backgroundImage = "url('images/background.png')";
