@@ -25,7 +25,7 @@ scoreBtn.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
 
-    Bimages();
+    // Bimages();
 });
 
 backbtn.addEventListener("click", () => {
