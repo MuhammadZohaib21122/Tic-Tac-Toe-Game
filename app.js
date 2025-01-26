@@ -32,7 +32,7 @@ backbtn.addEventListener("click", () => {
     scoreBoard.classList.add("hide");
     main.classList.remove("hide");
     enableBoxes();
-    Bimages();
+    // Bimages();
 });
 
 
