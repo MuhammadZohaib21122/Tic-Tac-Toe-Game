@@ -25,14 +25,14 @@ scoreBtn.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
 
-    // Bimages();
+    Bimages();
 });
 
 backbtn.addEventListener("click", () => {
     scoreBoard.classList.add("hide");
     main.classList.remove("hide");
     enableBoxes();
-    // Bimages();
+    Bimages();
 });
 
 
