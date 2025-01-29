@@ -13,6 +13,7 @@ let scoreX = document.querySelector("#scoreX");
 let scoreO = document.querySelector("#scoreO");
 let score1 = document.querySelector("#new-btn1");
 
+
 score1.addEventListener("click", () => {
     scoreBoard.classList.remove("hide");
     main.classList.add("hide");
@@ -33,6 +34,7 @@ backbtn.addEventListener("click", () => {
     enableBoxes();
     // Bimages();
 });
+
 
 let turnO = true;
 
