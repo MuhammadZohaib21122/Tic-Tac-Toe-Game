@@ -86,6 +86,8 @@ body {
 #image {
 
     background-image: url('images/win_O.gif');
+    background-size: cover;
+    background-position: auto;
     max-width: 100%;
     height: auto;
     margin-top: 2.5rem;
@@ -123,27 +125,20 @@ body {
     height: 100vmin;
 }
 
-/* #back {
+#back {
     padding: 1rem;
     font-size: 2rem;
     width: 20rem;
+    max-width: 100%; 
     background-color: rgb(255, 166, 0);
     color: rgb(122, 17, 17);
     border-radius: 1rem;
     display: block;
-    margin-top: 180px;
-    margin-left: 520px;
-    
-} */
-
-#back {
-
-    background-image: url('images/back_button.png');
-    max-width: 100%;
-    height: 50px;
-    width: 50px;
-    margin-top: 180px;
-    margin-left: 520px;
+    margin: center; 
+    margin-top: 19vh; 
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 #msg1 {
